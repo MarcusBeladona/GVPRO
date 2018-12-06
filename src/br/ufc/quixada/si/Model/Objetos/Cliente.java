@@ -1,9 +1,10 @@
 package br.ufc.quixada.si.Model.Objetos;
 
 import br.ufc.quixada.si.Model.Listas.ListaPedidos;
+import br.ufc.quixada.si.Model.Menus.InterfaceMenuPessoa;
 import br.ufc.quixada.si.Model.Menus.MenuCliente;
 
-public class Cliente extends Pessoa {
+public class Cliente extends Pessoa implements InterfaceMenuPessoa {
 
     public ListaPedidos listaPedidos = new ListaPedidos();
 

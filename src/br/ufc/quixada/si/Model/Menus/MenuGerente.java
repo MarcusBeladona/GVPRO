@@ -4,6 +4,7 @@ import br.ufc.quixada.si.Model.Listas.ListaPessoas;
 import br.ufc.quixada.si.Model.Objetos.Gerente;
 import br.ufc.quixada.si.Model.Objetos.Pessoa;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -12,7 +13,7 @@ public class MenuGerente extends MenuPessoa {
 
     static Scanner read = new Scanner(in);
 
-    public static void mostrar(Gerente gerente) {
+    public static void mostrar(Gerente gerente) throws InputMismatchException {
 
         System.out.println("Olá " + gerente.getNome() + ", veja suas opções da conta:");
 

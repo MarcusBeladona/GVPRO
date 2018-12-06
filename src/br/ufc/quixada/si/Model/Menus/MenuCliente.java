@@ -2,6 +2,7 @@ package br.ufc.quixada.si.Model.Menus;
 
 import br.ufc.quixada.si.Model.Objetos.Cliente;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -10,9 +11,8 @@ public class MenuCliente extends MenuPessoa {
 
     static Scanner read = new Scanner(in);
 
-    public static void mostrar(Cliente cliente) {
+    public static void mostrar(Cliente cliente) throws InputMismatchException {
         do {
-
             System.out.print("Olá " + cliente.getNome() + ", veja suas opções da conta:" +
                     "\n1: Atualizar    2: Deletar    3: Pedidos    0: Voltar" +
                     "\nDigite uma opção: ");
@@ -32,7 +32,6 @@ public class MenuCliente extends MenuPessoa {
                     return;
                 default:
             }
-
         } while(true);
     }
 }

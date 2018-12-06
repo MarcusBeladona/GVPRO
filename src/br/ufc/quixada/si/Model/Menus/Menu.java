@@ -4,6 +4,7 @@ import br.ufc.quixada.si.Model.Listas.ListaPessoas;
 import br.ufc.quixada.si.Model.Objetos.Cliente;
 import br.ufc.quixada.si.Model.Objetos.Pessoa;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -12,12 +13,12 @@ public class Menu {
 
     static Scanner read = new Scanner(in);
 
-    public static void mostrar() {
-
+    public static void mostrar() throws InputMismatchException {
         do {
-            System.out.print("--- GVPRO ---" +
+            System.out.print("+ Gerenciador de vendas e produtos +" +
                     "\n1: Listar    2: Login    3: Cadastrar   0: Sair" +
                     "\nDigite uma opção: ");
+
             int entrada = read.nextInt();
 
             switch(entrada) {
@@ -27,7 +28,6 @@ public class Menu {
                     System.out.println();
                     break;
                 case 2:
-                    System.out.println();
                     read.nextLine();
                     login();
                     System.out.println();

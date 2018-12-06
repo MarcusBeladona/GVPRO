@@ -40,7 +40,7 @@ public class ListaPedidos {
 
     public void listar() {
         for(Pedido p : pedidoHashMap.values()) {
-            System.out.println(p.getId() + " " + p.getCodigo());
+            System.out.println("Pedido " + p.getCodigo());
         }
     }
 }

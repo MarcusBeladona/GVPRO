@@ -1,8 +1,9 @@
 package br.ufc.quixada.si.Model.Objetos;
 
 import br.ufc.quixada.si.Model.Listas.ListaPessoas;
+import br.ufc.quixada.si.Model.Menus.InterfaceMenuPessoa;
 
-public abstract class Pessoa {
+public abstract class Pessoa implements InterfaceMenuPessoa {
 
     private int    id;
     private String nome;

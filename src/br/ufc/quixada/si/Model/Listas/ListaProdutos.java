@@ -43,7 +43,7 @@ public class ListaProdutos {
 
     public static void listar() {
         for(Produto p : produtoHashMap.values()) {
-            System.out.println(p.getId() + " " + p.getNome());
+            System.out.printf("%-5d %-10s %-20s\n",p.getId(),p.getNome(),p.getDescricao());
         }
     }
 }

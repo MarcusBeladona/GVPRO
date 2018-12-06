@@ -43,7 +43,7 @@ public class ListaPessoas {
 
     public static void listar() {
         for(Pessoa p : pessoaHashMap.values()) {
-            System.out.println(p.getId() + " " + p.getNome());
+            System.out.printf("%-5d %-10s %-10s\n",p.getId(),p.getNome(),p.getClass().getSimpleName());
         }
     }
 }

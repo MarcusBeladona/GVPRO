@@ -4,6 +4,7 @@ import br.ufc.quixada.si.Model.Listas.ListaProdutos;
 import br.ufc.quixada.si.Model.Objetos.Pedido;
 import br.ufc.quixada.si.Model.Objetos.Produto;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -12,9 +13,9 @@ public class MenuProdutos {
 
     private static Scanner read = new Scanner(in);
 
-    public static void mostrar(Pedido pedido) {
+    public static void mostrar(Pedido pedido) throws InputMismatchException {
         do {
-            System.out.print("-- Produtos --" +
+            System.out.print("\nProdutos" +
                     "\n1: Listar    2: Adicionar     3: Remover    0: Voltar" +
                     "\nDigite uma opção: ");
             int entrada = read.nextInt();
@@ -37,9 +38,10 @@ public class MenuProdutos {
         } while(true);
     }
 
-    public static void mostrar() {
+    public static void mostrar() throws InputMismatchException {
         do {
-            System.out.print("1: Listar    2: Adicionar    4: Selecionar    0: Voltar");
+            System.out.print("1: Listar    2: Adicionar    4: Selecionar    0: Voltar" +
+                    "\nDigite uma opção: ");
             int entrada = read.nextInt();
             switch(entrada) {
                 case 1:
@@ -93,16 +95,16 @@ public class MenuProdutos {
     }
 
     public static void adicionar() {
-        System.out.println("Nome do produto: ");
+        System.out.print("Nome do produto: ");
         String nome = read.nextLine();
-        System.out.println("Descrição: ");
+        System.out.print("Descrição: ");
         String  descricao = read.nextLine();
         Produto produto   = new Produto(nome, descricao);
         ListaProdutos.inserir(produto);
         System.out.println("Produto adicionado.");
     }
 
-    public static void selecionar() {
+    public static void selecionar() throws InputMismatchException {
         System.out.print("Digite o nome do produto: ");
         String  nome    = read.nextLine();
         Produto produto = ListaProdutos.selecionar(nome);
@@ -129,7 +131,7 @@ public class MenuProdutos {
         }
     }
 
-    public static void atualizar(Produto produto) {
+    public static void atualizar(Produto produto) throws InputMismatchException {
         do {
             System.out.print("1: Nome    2: Descrição    3: Voltar" +
                     "\nDigite uma opção: ");
@@ -138,13 +140,13 @@ public class MenuProdutos {
                 case 1:
                     System.out.print("Digite o novo nome: ");
                     String novoNome = read.nextLine();
-                    produto.setNome(novoNome);
+                    ListaProdutos.atualizarNome(produto, novoNome);
                     System.out.println("Nome atualizado.");
                     break;
                 case 2:
                     System.out.print("Digite a nova descrição: ");
                     String novaDescricao = read.nextLine();
-                    produto.setDescricao(novaDescricao);
+                    ListaProdutos.atualizarDescricao(produto, novaDescricao);
                     System.out.println("Descrição atualizada.");
                     break;
                 case 0:

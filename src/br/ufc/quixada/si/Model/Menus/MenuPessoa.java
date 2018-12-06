@@ -3,6 +3,7 @@ package br.ufc.quixada.si.Model.Menus;
 import br.ufc.quixada.si.Model.Listas.ListaPessoas;
 import br.ufc.quixada.si.Model.Objetos.Pessoa;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import static java.lang.System.in;
@@ -11,10 +12,9 @@ public abstract class MenuPessoa {
 
     static Scanner read = new Scanner(in);
 
-    public static void atualizar(Pessoa pessoa) {
+    public static void atualizar(Pessoa pessoa) throws InputMismatchException {
 
         do {
-
             System.out.print("O que deseja atualizar?" +
                     "\n1: Nome    2: Senha    0: Voltar" +
                     "\nDigite uma opção: ");
