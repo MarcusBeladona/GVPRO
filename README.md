@@ -17,11 +17,11 @@ devem seguir alguns requisitos:
 * [X] Usar pelo menos três *HashMaps* para armazenar dados do sistema em memória.
 * [x] Herança
 * [x] Classe abstrata
-* [ ] Interface
+* [x] Interface
 * [x] Polimorfismo
 * [x] Encapsulamento
-* [ ] Abstração.
-* [ ] Os erros devem ser tratados (*Tratamento de erro*).
+* [x] Abstração.
+* [x] Os erros devem ser tratados (*Tratamento de erro*).
 * [ ] Opcional: Interface gráfica para desktop ou web.
 * [ ] Opcional: Se desejar salvar os dados do programa em arquivo isso valerá pontos
 extras por não perder os dados ao final da execução do programa.
