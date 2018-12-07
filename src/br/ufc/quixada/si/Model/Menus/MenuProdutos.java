@@ -33,14 +33,14 @@ public class MenuProdutos {
                 case 0:
                     return;
                 default:
-                    System.out.println("Entrada inválida, você está errado.");
+                    System.out.println("Entrada inválida.");
             }
         } while(true);
     }
 
     public static void mostrar() throws InputMismatchException {
         do {
-            System.out.print("1: Listar    2: Adicionar    4: Selecionar    0: Voltar" +
+            System.out.print("1: Listar    2: Adicionar    3: Selecionar    0: Voltar" +
                     "\nDigite uma opção: ");
             int entrada = read.nextInt();
             switch(entrada) {
@@ -53,9 +53,6 @@ public class MenuProdutos {
                     break;
                 case 3:
                     read.nextLine();
-                    selecionar();
-                    break;
-                case 4:
                     selecionar();
                     break;
                 case 0:
